@@ -1,0 +1,12 @@
+dartdoc:
+  categoryOrder: ["Authentication", "API", "Ticket"]
+  linkToSource:
+    root: "."
+    uriTemplate: "https://gitlab.kkinternal.com/xddd/kkbox_openapi_dart/blob/master/%f%"
+  showUndocumentedCategories: true
+  ignore:
+    - ambiguous-doc-reference
+  errors:
+    - unresolved-doc-reference
+  warnings:
+    - tool-error

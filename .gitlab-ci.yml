@@ -1,0 +1,27 @@
+stages:
+  - deploy
+  - test
+
+test:
+  stage: test
+  image: google/dart:2.5.0
+  before_script:
+    - pub get
+  script:
+    - pub run test_coverage
+  tags:
+    - docker
+
+pages:
+  stage: deploy
+  image: google/dart:2.5.0
+  script:
+    - dartdoc
+    - mv doc/api/ public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+  tags:
+    - docker
