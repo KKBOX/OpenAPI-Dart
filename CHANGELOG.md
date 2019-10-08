@@ -1,7 +1,3 @@
-## 2.0.4
+## 2.1.0
 
-- Updates error handling
-
-## 2.0.0
-
-- Adds partner APIs.
+- A new start.

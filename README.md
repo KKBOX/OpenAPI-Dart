@@ -1,10 +1,8 @@
 # kkbox_openapi
 
-[![pipeline status](https://gitlab.kkinternal.com/xddd/kkbox_openapi_dart/badges/master/pipeline.svg)](https://gitlab.kkinternal.com/xddd/kkbox_openapi_dart/commits/master) | [![coverage report](https://gitlab.kkinternal.com/xddd/kkbox_openapi_dart/badges/master/coverage.svg)](https://gitlab.kkinternal.com/xddd/kkbox_openapi_dart/commits/master)
-
-The package implements a client to access data provided by KKBOX's Open and
-Partner API, using Dart programming language. You can adopt the package to build
-Flutter apps, or Dart command line tools.
+The package implements a client to access data provided by KKBOX's Open API,
+using Dart programming language. You can adopt the package to build Flutter
+apps, or Dart command line tools.
 
 ## Installation
 
@@ -20,16 +18,9 @@ Then call `pub get` or `flutter packages get`.
 
 ## Usage
 
-The packages contained classes for not only Open API but also Patner API, and
-make them into two libraries, 'kkbox_openapi' and 'kkbox_partner'.
-
-However, no matter what kind of app you want to create, you need to set up a
-basic client configuration, and you may want an access token for the users. You
-can do it with the 'kkbox_auth' library.
-
-Where you will start from is to create an instance of `ClientConfiguration`,
-pass your client ID and client secret. All of the classes that do API calls in
-the package require your client configuration.
+Where you start is to create an instance of `ClientConfiguration`, pass your
+client ID and client secret. All of the classes that do API calls in the package
+require your client configuration.
 
 ```dart
 var config = ClientConfiguration(
