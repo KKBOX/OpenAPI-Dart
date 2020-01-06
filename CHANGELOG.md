@@ -1,3 +1,7 @@
+## 2.2.1
+
+- Adopts modern Dart syntax.
+
 ## 2.2.0+4
 
 - Formats code.
