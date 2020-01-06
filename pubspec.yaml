@@ -1,6 +1,6 @@
 name: kkbox_openapi
 description: KKBOX's Open API provides various data from KKBOX's rich music archive. It helps you to access data about KKBOX's song tracks, albums, artist playlist and so on.
-version: 2.2.0+4
+version: 2.2.1
 homepage: https://github.com/KKBOX/OpenAPI-Dart
 author: zonble <zonble@gmail.com>
 
