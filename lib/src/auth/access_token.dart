@@ -38,10 +38,8 @@ class AccessToken {
     final expiresIn = map['expires_in'];
     final refreshToken = map['refresh_token'];
     final scopeString = map['scope'];
-    Set<Scope> scopes = Set();
-    if (scopeString != null) {
-      scopes = scopesFromString(scopeString);
-    }
+    var scopes =
+        scopeString != null ? scopesFromString(scopeString) : <Scope>{};
     return AccessToken(
       accessToken: accessToken,
       tokenType: tokenType,

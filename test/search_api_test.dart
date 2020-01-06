@@ -1,6 +1,7 @@
 import 'package:kkbox_openapi/kkbox_auth.dart';
 import 'package:kkbox_openapi/kkbox_openapi.dart';
 import 'package:test/test.dart';
+
 import 'client_setup.dart';
 
 void main() {
@@ -20,7 +21,7 @@ void main() {
         final api = SearchApi('Jay Chou',
             configuration: config,
             accessToken: accessToken,
-            searchTypes: [SearchType.track].toSet());
+            searchTypes: {SearchType.track});
         final results = await api.run();
         expect(results.trackResults != null, isTrue);
         expect(results.artistResults == null, isTrue);
@@ -40,7 +41,7 @@ void main() {
         final api = SearchApi('周杰倫',
             configuration: config,
             accessToken: accessToken,
-            searchTypes: [SearchType.artist].toSet());
+            searchTypes: {SearchType.artist});
         final results = await api.run();
 
         expect(results.trackResults == null, isTrue);
@@ -61,7 +62,7 @@ void main() {
         final api = SearchApi('Jay Chou',
             configuration: config,
             accessToken: accessToken,
-            searchTypes: [SearchType.album].toSet());
+            searchTypes: {SearchType.album});
         final results = await api.run();
 
         expect(results.trackResults == null, isTrue);
@@ -81,7 +82,7 @@ void main() {
         final api = SearchApi('周杰倫',
             configuration: config,
             accessToken: accessToken,
-            searchTypes: [SearchType.playlist].toSet());
+            searchTypes: {SearchType.playlist});
         final results = await api.run();
 
         expect(results.trackResults == null, isTrue);

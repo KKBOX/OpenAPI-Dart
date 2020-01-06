@@ -44,19 +44,12 @@ class SearchResults {
   }
 
   Map<String, dynamic> toJson() {
-    Map<String, dynamic> json = {};
-    if (trackResults != null) {
-      json['tracks'] = trackResults.toJson();
-    }
-    if (albumResults != null) {
-      json['albums'] = albumResults.toJson();
-    }
-    if (artistResults != null) {
-      json['artists'] = artistResults.toJson();
-    }
-    if (playlistResults != null) {
-      json['playlists'] = playlistResults.toJson();
-    }
+    Map json = <String, dynamic>{};
+    if (trackResults != null) json['tracks'] = trackResults.toJson();
+    if (albumResults != null) json['albums'] = albumResults.toJson();
+    if (artistResults != null) json['artists'] = artistResults.toJson();
+    if (playlistResults != null) json['playlists'] = playlistResults.toJson();
+
     json['paging'] = paging.toJson();
     json['summary'] = summary.toJson();
     return json;

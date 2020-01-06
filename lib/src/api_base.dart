@@ -61,7 +61,7 @@ abstract class Api<ResultType> {
   /// Fire the API call.
   Future<ResultType> run() async {
     http.Response response;
-    Map<String, String> headers = {};
+    var headers = <String, String>{};
     final url = _urlByAppendingStandardParameters();
     headers.addAll(customHTTPHeaders);
 
@@ -93,15 +93,15 @@ abstract class Api<ResultType> {
         break;
     }
     if (response == null) {
-      throw StateError("No response.");
+      throw StateError('No response.');
     }
     return await handleResponse(response);
   }
 
   String _urlByAppendingStandardParameters() {
-    String baseUrl = url;
+    var baseUrl = url;
     baseUrl += baseUrl.contains('?') ? '&' : '?';
-    Map<String, String> parameters = {};
+    var parameters = <String, String>{};
     parameters.addAll(customGetParameters);
     return baseUrl +
         parameters.keys

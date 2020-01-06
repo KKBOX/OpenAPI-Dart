@@ -36,15 +36,15 @@ class ClientCredentialsFlowApi extends Api<AccessToken> {
 
   @override
   Map<String, String> get customHTTPHeaders => {
-        'Authorization': this.configuration.loginCredential,
-        'User-Agent': this.configuration?.userAgent ?? '',
+        'Authorization': configuration.loginCredential,
+        'User-Agent': configuration?.userAgent ?? '',
       };
 
   @override
   HTTPMethod get httpMethod => HTTPMethod.post;
 
   @override
-  get postData => {'grant_type': 'client_credentials'};
+  Map<String, String> get postData => {'grant_type': 'client_credentials'};
 
   @override
   String get url => 'https://account.kkbox.com/oauth2/token';

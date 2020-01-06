@@ -26,10 +26,9 @@ Set<Scope> scopesFromString(String s) {
     return null;
   }
   // Scopes are space separated.
-  Set<String> stringSet = Set<String>.from(s.split(' ').map((x) => x.trim()));
+  var stringSet = Set<String>.from(s.split(' ').map((x) => x.trim()));
   if (stringSet.contains('all')) {
-    return Set<Scope>.from(
-        [Scope.userProfile, Scope.userTerritory, Scope.userAccountStatus]);
+    return {Scope.userProfile, Scope.userTerritory, Scope.userAccountStatus};
   }
   return Set<Scope>.from(
     stringSet.map((x) => scopeFromString(x)).whereType<Scope>(),
@@ -87,7 +86,7 @@ class ClientConfiguration {
 
   /// The login credential composed by client ID and client secret.
   String get loginCredential {
-    final String base = "${this.clientId}:${this.clientSecret}";
+    final base = '${clientId}:${clientSecret}';
     final bytes = utf8.encode(base);
     final clientCredential = base64Encode(bytes);
     return 'Basic ${clientCredential}';

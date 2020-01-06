@@ -30,7 +30,7 @@ class DataList<T> {
   }
 
   Map<String, dynamic> toJson() => {
-        'data': data.map((item) => this.dataConverter(item)).toList(),
+        'data': data.map((item) => dataConverter(item)).toList(),
         'paging': paging.toJson(),
         'summary': summary.toJson(),
       };

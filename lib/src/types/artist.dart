@@ -23,7 +23,7 @@ class ArtistInfo {
 
     images = [];
     for (var imageObject in (jsonObject['images'] ?? [])) {
-      images.add(new ImageInfo(imageObject));
+      images.add(ImageInfo(imageObject));
     }
   }
 
