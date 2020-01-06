@@ -1,7 +1,7 @@
 name: kkbox_openapi
-description: A starting point for Dart libraries or applications.
-version: 2.1.0+6
-homepage: https://xddd.kkbox.io/kkbox_openapi_dart
+description: KKBOX's Open API provides various data from KKBOX's rich music archive. It helps you to access data about KKBOX's song tracks, albums, artist playlist and so on.
+version: 2.2.0+4
+homepage: https://github.com/KKBOX/OpenAPI-Dart
 author: zonble <zonble@gmail.com>
 
 environment:
@@ -9,8 +9,10 @@ environment:
 
 dependencies:
   http: ^0.12.0+3
+  meta: ^1.1.8
 
 dev_dependencies:
   pedantic: ^1.9.0
   test: ^1.9.4
   test_coverage: ^0.4.0
+

@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches new released album categories.
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories .
+/// See https://docs-en.kkbox.codes/reference#new-release-categories .
 class NewReleasedAlbumsCategoriesApi
     extends KKBOXBaseApi<NewReleasedAlbumsCategoryList> {
   /// The limit the amount of items in API response.

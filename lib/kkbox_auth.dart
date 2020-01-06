@@ -2,10 +2,8 @@
 ///
 /// ## Client Credentials Flow
 ///
-/// If your client does not need to access personal data such as private
-/// playlists and favorite tracks (by calling API such as [MeFavoriteTracksApi]
-/// and [MePrivatePlaylistsApi]), all you need to do is to have a client ID and
-/// secret on developer.kkbox.com, create an instance of
+/// To start accessing KKBOX's Open API, all you need to do is to have a client
+/// ID and secret on developer.kkbox.com, create an instance of
 /// [ClientCredentialsFlowApi], call run.
 ///
 /// Then you can get an [AccessToken]. With the [AccessToken], you can then

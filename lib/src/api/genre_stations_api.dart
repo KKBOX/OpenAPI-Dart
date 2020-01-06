@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetch genre stations.
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#genrestations .
+/// See https://docs-en.kkbox.codes/reference#genre-stations .
 class GenreStationsApi extends KKBOXBaseApi<RadioStationList> {
   /// The limit the amount of items in API response.
   final int limit;

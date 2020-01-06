@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches charts playlists.
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#charts .
+/// See https://docs-en.kkbox.codes/reference#charts .
 class ChartsApi extends KKBOXBaseApi<PlaylistList> {
   /// The limit the amount of items in API response.
   final int limit;

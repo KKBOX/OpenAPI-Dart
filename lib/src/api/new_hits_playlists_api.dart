@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches new hits playlists.
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists .
+/// See https://docs-en.kkbox.codes/reference#new-hits-playlists .
 class NewHitsPlaylistsApi extends KKBOXBaseApi<PlaylistList> {
   /// The limit the amount of items in API response.
   final int limit;

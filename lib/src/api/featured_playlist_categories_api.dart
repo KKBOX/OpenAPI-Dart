@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetch featured playlists categories.
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id .
+/// See https://docs-en.kkbox.codes/reference#featuredplaylistcategories-category_id
 class FeaturedPlaylistsCategoriesApi
     extends KKBOXBaseApi<FeaturedPlaylistCategoryList> {
   /// The limit the amount of items in API response.

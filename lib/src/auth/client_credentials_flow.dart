@@ -44,7 +44,7 @@ class ClientCredentialsFlowApi extends Api<AccessToken> {
   HTTPMethod get httpMethod => HTTPMethod.post;
 
   @override
-  Map<String, String> get postData => {'grant_type': 'client_credentials'};
+  Map get postData => {'grant_type': 'client_credentials'};
 
   @override
   String get url => 'https://account.kkbox.com/oauth2/token';

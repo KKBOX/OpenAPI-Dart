@@ -6,16 +6,16 @@ import 'package:meta/meta.dart';
 
 import 'base.dart';
 
-/// Fetches a playlist by giving a [playlistId].
+/// Fetches contents of a category of children contents.
 ///
-/// See https://docs-en.kkbox.codes/reference#shared-playlists_playlist_id .
-class PlaylistApi extends KKBOXBaseApi<PlaylistInfo> {
-  /// The ID of the desired artist.
-  final String playlistId;
+/// See https://docs-en.kkbox.codes/reference#children-categories_category_id .
+class ChildrenCategoryApi extends KKBOXBaseApi<ChildrenCategoryGroup> {
+  /// ID of the category.
+  String categoryId;
 
   /// Creates a new instance.
-  PlaylistApi(
-    this.playlistId, {
+  ChildrenCategoryApi(
+    this.categoryId, {
     @required String accessToken,
     @required ClientConfiguration configuration,
     Territory territory = Territory.taiwan,
@@ -31,11 +31,12 @@ class PlaylistApi extends KKBOXBaseApi<PlaylistInfo> {
       };
 
   @override
-  String get url => baseUrl(configuration) + 'shared-playlists/$playlistId';
+  String get url =>
+      baseUrl(configuration) + 'children-categories/' + categoryId;
 
   @override
-  PlaylistInfo parseResult(String body) {
+  ChildrenCategoryGroup parseResult(String body) {
     final map = json.decode(body);
-    return PlaylistInfo(map);
+    return ChildrenCategoryGroup(map);
   }
 }

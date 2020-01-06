@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches metadata of a track by giving a [trackId].
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id .
+/// See https://docs-en.kkbox.codes/reference#tracks_track_id .
 class TrackApi extends KKBOXBaseApi<TrackInfo> {
   /// The ID of the desired track.
   final String trackId;

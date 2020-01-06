@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetch mood stations.
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#moodstations .
+/// See https://docs-en.kkbox.codes/reference#mood-stations .
 class MoodStationsApi extends KKBOXBaseApi<RadioStationList> {
   /// The limit the amount of items in API response.
   final int limit;

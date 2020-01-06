@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches tracks contained in an album by giving an [albumId].
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#albums-album_id-tracks .
+/// See https://docs-en.kkbox.codes/reference#albums_album_id_tracks .
 class AlbumTracksApi extends KKBOXBaseApi<TrackList> {
   /// The ID of the desired album.
   final String albumId;

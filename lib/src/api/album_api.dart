@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches metadata of an album by giving an [albumId]
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#albums-album_id .
+/// See https://docs-en.kkbox.codes/reference#albums_album_id .
 class AlbumApi extends KKBOXBaseApi<AlbumInfo> {
   /// The ID of the desired album.
   final String albumId;

@@ -1,18 +1,16 @@
 # kkbox_openapi
 
+[![pub package](https://img.shields.io/pub/v/kkbox_openapi.svg)](https://pub.dev/packages/kkbox_openapi)
+[![Actions Status](https://github.com/KKBOX//OpenAPI-Dart/workflows/Dart%20CI/badge.svg)](https://github.com/KKBOX//OpenAPI-Dart/actions)
+[![License Apache](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
+
 The package implements a client to access data provided by KKBOX's Open API,
 using Dart programming language. You can adopt the package to build Flutter
 apps, or Dart command line tools.
 
 ## Installation
 
-Please add the following lines to your `pubspec.yaml` file.
-
-```yaml
-dependencies:
-  kkbox_openapi:
-    git: "git@gitlab.kkinternal.com:xddd/kkbox_openapi_dart.git"
-```
+To use the SDK, add `kkbox_openapi` to your pubspec.yaml file.
 
 Then call `pub get` or `flutter packages get`.
 
@@ -67,12 +65,18 @@ func() {
 }
 ```
 
-## Documentation
-
-Please visit https://xddd.kkbox.io/kkbox_openapi_dart/ .
-
 ## Features and bugs
 
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: https://gitlab.kkinternal.com/xddd/kkbox_openapi_dart
+[tracker]: https://github.com/KKBOX/OpenAPI-Dart/issues
+
+## License
+
+Copyright 2018 KKBOX Technologies Limited
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

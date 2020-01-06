@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches tracks in a genre station by giving a [stationId].
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id .
+/// See https://docs-en.kkbox.codes/reference#genre-stations_station_id .
 class GenreStationApi extends KKBOXBaseApi<RadioStation> {
   /// The ID of the desired station.
   final String stationId;

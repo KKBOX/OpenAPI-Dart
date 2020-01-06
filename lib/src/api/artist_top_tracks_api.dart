@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches top tracks of an artist by giving an [artistId],
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-toptracks .
+/// See https://docs-en.kkbox.codes/reference#artists_artist_id_top-tracks .
 class ArtistTopTracksApi extends KKBOXBaseApi<TrackList> {
   /// The ID of the desired artist.
   final String artistId;

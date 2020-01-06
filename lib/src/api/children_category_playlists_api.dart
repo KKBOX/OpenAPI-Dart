@@ -6,12 +6,12 @@ import 'package:meta/meta.dart';
 
 import 'base.dart';
 
-/// Fetches tracks in a mood station by giving a [stationId].
+/// Fetches playlists in a category of children contents.
 ///
-/// See https://docs-en.kkbox.codes/reference#mood-stations_station_id .
-class MoodStationApi extends KKBOXBaseApi<RadioStation> {
-  /// The ID of the desired station.
-  final String stationId;
+/// See https://docs-en.kkbox.codes/reference#children-categories_category_id_playlists .
+class ChildrenCategoryPlaylistsApi extends KKBOXBaseApi<PlaylistList> {
+  /// ID of the category.
+  String categoryId;
 
   /// The limit the amount of items in API response.
   final int limit;
@@ -20,8 +20,8 @@ class MoodStationApi extends KKBOXBaseApi<RadioStation> {
   final int offset;
 
   /// Creates a new instance.
-  MoodStationApi(
-    this.stationId, {
+  ChildrenCategoryPlaylistsApi(
+    this.categoryId, {
     @required String accessToken,
     @required ClientConfiguration configuration,
     Territory territory = Territory.taiwan,
@@ -41,11 +41,12 @@ class MoodStationApi extends KKBOXBaseApi<RadioStation> {
       };
 
   @override
-  String get url => baseUrl(configuration) + 'mood-stations/$stationId';
+  String get url =>
+      baseUrl(configuration) + 'children-categories/$categoryId/playlists';
 
   @override
-  RadioStation parseResult(String body) {
+  PlaylistList parseResult(String body) {
     final map = json.decode(body);
-    return RadioStation(map);
+    return PlaylistList(map);
   }
 }

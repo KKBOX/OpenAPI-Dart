@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:kkbox_openapi/kkbox_auth.dart';
 import 'package:kkbox_openapi/kkbox_openapi_types.dart';
 import 'package:meta/meta.dart';
+
 import 'base.dart';
 
 /// The types used in calling search API.
@@ -43,7 +44,7 @@ String searchTypeToString(SearchType aType) {
 /// once. You can specify what kinds of results you want by specifying the
 /// [searchTypes] parameter.
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#search .
+/// See https://docs-en.kkbox.codes/reference#search .
 class SearchApi extends KKBOXBaseApi<SearchResults> {
   /// The search keyword.
   final String keyword;
@@ -60,7 +61,8 @@ class SearchApi extends KKBOXBaseApi<SearchResults> {
   final int offset;
 
   /// Creates a new instance.
-  SearchApi(this.keyword, {
+  SearchApi(
+    this.keyword, {
     @required String accessToken,
     @required ClientConfiguration configuration,
     Territory territory = Territory.taiwan,
@@ -68,16 +70,16 @@ class SearchApi extends KKBOXBaseApi<SearchResults> {
     this.limit = 50,
     this.offset = 0,
   }) : super(
-    accessToken: accessToken,
-    configuration: configuration,
-    territory: territory,
-  );
+          accessToken: accessToken,
+          configuration: configuration,
+          territory: territory,
+        );
 
   @override
   Map<String, String> get customGetParameters {
     final searchTypes = this.searchTypes ?? SearchType.values.toSet();
     final typeString =
-    searchTypes.map((x) => searchTypeToString(x)).cast<String>().join(',');
+        searchTypes.map((x) => searchTypeToString(x)).cast<String>().join(',');
     final keyword = Uri.encodeFull(this.keyword);
     return {
       'q': keyword,

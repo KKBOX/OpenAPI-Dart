@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches a new released album category by giving a [categoryId].
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id .
+/// See https://docs-en.kkbox.codes/reference#new-release-categories_category_id .
 class NewReleasedAlbumsCategoryApi
     extends KKBOXBaseApi<NewReleasedAlbumsCategory> {
   /// ID of the desired category.

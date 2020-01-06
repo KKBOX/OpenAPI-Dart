@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches albums belong to an artist by giving an [artistId].
 ///
-/// See  https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-albums .
+/// See  https://docs-en.kkbox.codes/reference#artists_artist_id_albums .
 class ArtistAlbumsApi extends KKBOXBaseApi<AlbumList> {
   /// The ID of the desired artist.
   final String artistId;

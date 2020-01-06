@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetch playlists in a featured category by giving a [categoryId].
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id-playlists.
+/// See https://docs-en.kkbox.codes/reference#featured-playlist-categories .
 class FeaturedPlaylistsCategoryApi
     extends KKBOXBaseApi<FeaturedPlaylistCategory> {
   /// The ID of the desired category.

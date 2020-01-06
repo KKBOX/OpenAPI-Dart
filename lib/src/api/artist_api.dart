@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches metadata of an artist by giving an [artistId]
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id .
+/// See https://docs-en.kkbox.codes/reference#artists_artist_id .
 class ArtistApi extends KKBOXBaseApi<ArtistInfo> {
   /// The ID of the desired artist.
   final String artistId;

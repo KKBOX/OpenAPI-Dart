@@ -8,7 +8,7 @@ import 'base.dart';
 
 /// Fetches tracks contained in a playlist by giving a [playlistId].
 ///
-/// See https://docs-en.kkbox.codes/v1.1/reference#shared-playlists_playlist_id_tracks .
+/// See https://docs-en.kkbox.codes/reference#shared-playlists_playlist_id_tracks .
 class PlaylistTracksApi extends KKBOXBaseApi<TrackList> {
   /// The ID of the desired artist.
   final String playlistId;

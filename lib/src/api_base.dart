@@ -61,9 +61,9 @@ abstract class Api<ResultType> {
   /// Fire the API call.
   Future<ResultType> run() async {
     http.Response response;
-    var headers = <String, String>{};
-    final url = _urlByAppendingStandardParameters();
+    Map headers = <String, String>{};
     headers.addAll(customHTTPHeaders);
+    final url = _urlByAppendingStandardParameters();
 
     switch (httpMethod) {
       case HTTPMethod.get:
@@ -92,9 +92,8 @@ abstract class Api<ResultType> {
       default:
         break;
     }
-    if (response == null) {
-      throw StateError('No response.');
-    }
+    if (response == null) throw StateError('No response.');
+
     return await handleResponse(response);
   }
 
